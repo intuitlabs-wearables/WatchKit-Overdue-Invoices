@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import <PushNotifications/PushNotificationSDK.h>
+//#import <PushNotifications/PushNotificationSDK.h>
 #import "KeychainItemWrapper.h"
 #import "LoginViewController.h"
 #import "DashboardViewController.h"
@@ -26,21 +26,21 @@ UIViewController* root;
     root = self.window.rootViewController;
     
     // request for push notification permission first time
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
-    {
-        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
-        [[UIApplication sharedApplication] registerForRemoteNotifications];
-    }
-    else
-    {
-        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
-         (UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert)];
-    }
-    
-    // register this application with Intuit's Push Notification Gateway application with associated sender id
-    [[PushNotificationSDK sharedPushManager] setSenderId:@"your_senderId"];
-    [[PushNotificationSDK sharedPushManager] setDryRun:YES];
-    
+//    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+//    {
+//        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+//        [[UIApplication sharedApplication] registerForRemoteNotifications];
+//    }
+//    else
+//    {
+//        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+//         (UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert)];
+//    }
+//    
+//    // register this application with Intuit's Push Notification Gateway application with associated sender id
+//    [[PushNotificationSDK sharedPushManager] setSenderId:@"1942ed4a-00c8-4492-b9f5-5ce627a10320"];
+//    [[PushNotificationSDK sharedPushManager] setDryRun:YES];
+//    
 
     [self loginChecks];
     
@@ -69,9 +69,9 @@ UIViewController* root;
     
     self.window.rootViewController = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"DashboardViewController"];
     
-    [[PushNotificationSDK sharedPushManager] registerUser:username
-                                                     inGroups:[NSArray arrayWithObjects:@"iosusergroup",@"group1",nil]
-                                              withDeviceToken:globaldeviceToken error:nil];
+//    [[PushNotificationSDK sharedPushManager] registerUser:username
+//                                                     inGroups:[NSArray arrayWithObjects:@"iosusergroup",@"group1",nil]
+//                                              withDeviceToken:globaldeviceToken error:nil];
 }
 
 /*
@@ -93,9 +93,9 @@ UIViewController* root;
     KeychainItemWrapper *keychainItem = [[KeychainItemWrapper alloc] initWithIdentifier:@"IntuitWearLogin" accessGroup:nil];
     NSString *username = [keychainItem objectForKey:(__bridge id)(kSecAttrAccount)];
     if([username length] > 0) {
-        [[PushNotificationSDK sharedPushManager] registerUser:username
-                                                inGroups:[NSArray arrayWithObjects:@"iosusergroup",@"hello",nil]
-                                         withDeviceToken:deviceToken error:nil];
+//        [[PushNotificationSDK sharedPushManager] registerUser:username
+//                                                inGroups:[NSArray arrayWithObjects:@"iosusergroup",@"hello",nil]
+//                                         withDeviceToken:deviceToken error:nil];
     }
 }
 
