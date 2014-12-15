@@ -1,7 +1,7 @@
 {
     "aps": {
-        "alert": "You have 3 Overdue Invoices Totaling $14,200.00",
-        "title": "You have 3 Overdue Invoices Totaling $14,200.00",
+        "alert": "You have 3 Overdue Invoices Totalling $14,200.00",
+        "title": "You have 3 Overdue Invoices Totalling $14,200.00",
         "category": "default"
     },
     
