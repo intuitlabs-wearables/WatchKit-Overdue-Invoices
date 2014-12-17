@@ -8,9 +8,9 @@
         <!--IntuitWear-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller title="IntuitWear" id="AgC-eL-Hgc" customClass="InterfaceController"/>
+                <controller title="IntuitWear" backgroundImage="main image" contentMode="scaleAspectFit" id="AgC-eL-Hgc" customClass="InterfaceController"/>
             </objects>
-            <point key="canvasLocation" x="235" y="347"/>
+            <point key="canvasLocation" x="235" y="452"/>
         </scene>
         <!--Dismiss-->
         <scene sceneID="kfT-BE-D9j">
@@ -28,7 +28,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="449" y="346"/>
+            <point key="canvasLocation" x="420" y="448"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
