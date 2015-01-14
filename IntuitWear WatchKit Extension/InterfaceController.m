@@ -39,17 +39,18 @@
 
 - (void)handleActionWithIdentifier:(NSString *)identifier
              forRemoteNotification:(NSDictionary *)remoteNotification {
-
+    NSData *data = [[remoteNotification objectForKey:@"payload"] dataUsingEncoding:NSUTF8StringEncoding];
+    id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     if([identifier isEqualToString:@"viewOverdueInvoices"]) {
-        int total = (int) [[remoteNotification objectForKey:@"overdueAccounts"]count];
+      NSArray *pages = [json objectForKey:@"pages"];
+        int total = (int) [pages count];
         NSMutableArray *controllerNames = [[NSMutableArray alloc] init];
         for(int x = 0; x < total; x++) {
             [controllerNames addObject:@"pageController"];
         }
-        [self presentControllerWithNames:controllerNames contexts:[remoteNotification objectForKey:@"overdueAccounts"]];
-       
+        [self presentControllerWithNames:controllerNames contexts:pages];
     }
-  
+
 }
 
 @end

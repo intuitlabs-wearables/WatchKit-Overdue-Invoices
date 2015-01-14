@@ -12,5 +12,6 @@
         }
     ],
     
-    "overdueAccounts":[{"accountBalanceDue":"3,200.00","invoicebalances":"3200.0","accountCustomerName":"Savinay Berry"},{"accountBalanceDue":"10,000.00","invoicebalances":"10000.0","accountCustomerName":"Pari Lingampally"},{"accountBalanceDue":"1,000.00","invoicebalances":"1000.0","accountCustomerName":"Cindy Osmon"}]
+    "payload": "{\"style\": \"BigTextStyle\",\"bigContentTitle\": \"Action Test\",\"bigText\": \"This is a test of watch actions\",\"pages\" : [{\"pageTitle\": \"Savinay Berry\",\"pageText\": \"$3,200.00\",\"pageBackground\": \"tmpname\"},{\"pageTitle\": \"Pari Lingampally\",\"pageText\": \"$10,000.00\",\"pageBackground\": \"tmpname\"},{\"pageTitle\": \"Cindy Osmon\",\"pageText\": \"$1,000.00\",\"pageBackground\": \"tmpname\"}]}"
 }
+

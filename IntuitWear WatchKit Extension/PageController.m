@@ -16,10 +16,9 @@
         // Initialize variables here.
         // Configure interface objects here.
         NSLog(@"%@ init PageController", self);
-        [self.invoiceName setText:[NSString stringWithFormat:@"%@", [context objectForKey:@"accountCustomerName"]]];
-        [self.invoiceAmt setText:[NSString stringWithFormat:@"$%@", [context objectForKey:@"accountBalanceDue"]]];
+        [self.invoiceName setText:[NSString stringWithFormat:@"%@", [context objectForKey:@"pageTitle"]]];
+        [self.invoiceAmt setText:[NSString stringWithFormat:@"%@", [context objectForKey:@"pageText"]]];
     }
-    
     return self;
 }
 

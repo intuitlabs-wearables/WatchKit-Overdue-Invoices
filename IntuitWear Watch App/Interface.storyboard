@@ -36,7 +36,11 @@
                 <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController">
                     <items>
                         <group alignment="left" id="t8f-Gd-c4y"/>
-                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                        <group alignment="left" contentMode="scaleAspectFill" id="2G1-mk-59a">
+                            <items>
+                                <imageView width="1" height="1" alignment="left" verticalAlignment="center" image="main image" contentMode="scaleAspectFit" id="Ns1-Vi-wVs"/>
+                            </items>
+                        </group>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                 </glanceController>
