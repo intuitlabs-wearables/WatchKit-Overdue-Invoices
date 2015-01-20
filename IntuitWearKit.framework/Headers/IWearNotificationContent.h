@@ -75,7 +75,7 @@
 /*!
  *  This style supports a radial progress chart as is used in the Apple Watch Activity App
  */
-@property (nonatomic, retain) GlanceStyle *glanceStyle;
+@property (nonatomic, retain) GlanceStyle<Optional> *glanceStyle;
 
 /*!
  *  Actions that can be triggered by this Notification

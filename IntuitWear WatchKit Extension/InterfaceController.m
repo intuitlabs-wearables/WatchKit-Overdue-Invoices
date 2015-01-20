@@ -7,7 +7,7 @@
 //
 
 #import "InterfaceController.h"
-
+@import IntuitWearKit;
 
 @interface InterfaceController()
 
@@ -39,16 +39,14 @@
 
 - (void)handleActionWithIdentifier:(NSString *)identifier
              forRemoteNotification:(NSDictionary *)remoteNotification {
-    NSData *data = [[remoteNotification objectForKey:@"payload"] dataUsingEncoding:NSUTF8StringEncoding];
-    id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    IWearNotificationContent *notificationContent = [[IWearNotificationContent alloc] initWithString:[remoteNotification objectForKey:@"payload" ] error:nil];
     if([identifier isEqualToString:@"viewOverdueInvoices"]) {
-      NSArray *pages = [json objectForKey:@"pages"];
-        int total = (int) [pages count];
+        int total = (int) [notificationContent.pages count];
         NSMutableArray *controllerNames = [[NSMutableArray alloc] init];
         for(int x = 0; x < total; x++) {
             [controllerNames addObject:@"pageController"];
         }
-        [self presentControllerWithNames:controllerNames contexts:pages];
+        [self presentControllerWithNames:controllerNames contexts:notificationContent.pages];
     }
 
 }
