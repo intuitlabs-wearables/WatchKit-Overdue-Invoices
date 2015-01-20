@@ -17,18 +17,26 @@
             <objects>
                 <controller identifier="pageController" title="Dismiss" id="fb1-1J-jjZ" customClass="PageController">
                     <items>
-                        <label width="118" alignment="center" verticalAlignment="center" text="Label" id="MhZ-Tn-DbD"/>
-                        <label width="118" alignment="center" verticalAlignment="center" text="Label" id="Tvb-k6-wlf">
-                            <fontDescription key="font" type="boldSystem" pointSize="16"/>
-                        </label>
+                        <group width="138" height="153" alignment="left" verticalAlignment="center" layout="vertical" contentMode="scaleAspectFill" radius="0.0" hasDetent="YES" id="Kgv-FH-fTD">
+                            <items>
+                                <label width="118" alignment="center" verticalAlignment="center" text="Label" id="MhZ-Tn-DbD">
+                                    <fontDescription key="font" type="boldSystem" pointSize="16"/>
+                                </label>
+                                <label width="118" alignment="center" verticalAlignment="center" text="Label" id="Tvb-k6-wlf">
+                                    <fontDescription key="font" type="system" pointSize="16"/>
+                                </label>
+                            </items>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </group>
                     </items>
                     <connections>
+                        <outlet property="group" destination="Kgv-FH-fTD" id="d5R-kl-hGG"/>
                         <outlet property="invoiceAmt" destination="Tvb-k6-wlf" id="rAf-K0-D76"/>
                         <outlet property="invoiceName" destination="MhZ-Tn-DbD" id="NpA-uC-n2m"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="420" y="448"/>
+            <point key="canvasLocation" x="420" y="449"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">

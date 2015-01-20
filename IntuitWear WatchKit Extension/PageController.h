@@ -11,6 +11,7 @@
 @interface PageController : WKInterfaceController
 @property (weak, nonatomic) IBOutlet WKInterfaceLabel *invoiceName;
 @property (weak, nonatomic) IBOutlet WKInterfaceLabel *invoiceAmt;
+@property (weak, nonatomic) IBOutlet WKInterfaceGroup *group;
 
 
 @end
