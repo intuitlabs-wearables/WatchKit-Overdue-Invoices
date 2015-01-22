@@ -7,18 +7,20 @@
 //
 
 #import "PageController.h"
+@import IntuitWearKit;
 
 @implementation PageController
 - (instancetype)initWithContext:(id)context {
     self = [super initWithContext:context];
-    
+    NSLog(@"%@", context);
     if (self) {
         // Initialize variables here.
         // Configure interface objects here.
         NSLog(@"%@ init PageController", self);
-        [self.invoiceName setText:[NSString stringWithFormat:@"%@", [context objectForKey:@"pageTitle"]]];
-        [self.invoiceAmt setText:[NSString stringWithFormat:@"%@", [context objectForKey:@"pageText"]]];
-        [self.group setBackgroundImageNamed: [context objectForKey:@"pageBackground"]];
+        Page *page = context;
+        [self.invoiceName setText:[NSString stringWithFormat:@"%@", page.pageTitle]];
+        [self.invoiceAmt setText:[NSString stringWithFormat:@"%@", page.pageText]];
+        [self.group setBackgroundImageNamed: page.pageBackground];
     }
     return self;
 }

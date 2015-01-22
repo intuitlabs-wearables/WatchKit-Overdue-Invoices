@@ -46,6 +46,7 @@
         for(int x = 0; x < total; x++) {
             [controllerNames addObject:@"pageController"];
         }
+        NSLog(@"%@", notificationContent.pages);
         [self presentControllerWithNames:controllerNames contexts:notificationContent.pages];
     }
 
