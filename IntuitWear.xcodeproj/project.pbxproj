@@ -159,10 +159,10 @@
 				3A8EB7691A37A0F500D36250 /* NotificationController.m */,
 				3A8EB76B1A37A0F500D36250 /* GlanceController.h */,
 				3A8EB76C1A37A0F500D36250 /* GlanceController.m */,
-				3A8EB76E1A37A0F500D36250 /* Images.xcassets */,
-				3A8EB7621A37A0F500D36250 /* Supporting Files */,
 				3AA8E0AF1A39137F00C9DBC2 /* PageController.h */,
 				3AA8E0B01A39137F00C9DBC2 /* PageController.m */,
+				3A8EB76E1A37A0F500D36250 /* Images.xcassets */,
+				3A8EB7621A37A0F500D36250 /* Supporting Files */,
 			);
 			path = "IntuitWear WatchKit Extension";
 			sourceTree = "<group>";
