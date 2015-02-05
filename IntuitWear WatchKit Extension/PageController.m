@@ -14,7 +14,6 @@
 @implementation PageController
 - (instancetype)initWithContext:(id)context {
     self = [super initWithContext:context];
-    NSLog(@"%@", context);
     if (self) {
         // Initialize variables here.
         // Configure interface objects here.
