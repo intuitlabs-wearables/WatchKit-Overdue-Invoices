@@ -12,8 +12,8 @@
 @import IntuitWearKit;
 
 @implementation PageController
-- (instancetype)initWithContext:(id)context {
-    self = [super initWithContext:context];
+- (void)awakeWithContext:(id)context {
+    [super awakeWithContext:context];
     if (self) {
         // Initialize variables here.
         // Configure interface objects here.
@@ -23,7 +23,6 @@
         [self.invoiceAmt setText:[NSString stringWithFormat:@"%@", page.pageText]];
         [self.group setBackgroundImageNamed: page.pageBackground];
     }
-    return self;
 }
 
 - (void)willActivate {
