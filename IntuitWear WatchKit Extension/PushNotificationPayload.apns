@@ -3,7 +3,7 @@
         "alert": "You have 3 Overdue Invoices Totalling $14,200.00",
             "title": "You have 3 Overdue Invoices Totalling $14,200.00",
 
-        "category": "myCategory"
+        "category": "OverdueInvoices"
     },
     
     "WatchKit Simulator Actions": [
